@@ -69,27 +69,58 @@
 // var design = "▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬";
 // alert(design);
 
-// Chapter 3
+// // Chapter 3
 
-// 1. Declare a variable called age & assign to it your age.Show your age in an alert box.
-var age = 21;
-alert("I am " + age + " years old");
+// // 1. Declare a variable called age & assign to it your age.Show your age in an alert box.
+// var age = 21;
+// alert("I am " + age + " years old");
 
-// 2. Declare & initialize a variable to keep track of how many times a visitor has visited a web page.Show his/her number of visits on your web page.
-// For example: “You have visited this site N times”.
-var visitCount = 14;
-alert("You have visited this site " + visitCount + " times");
+// // 2. Declare & initialize a variable to keep track of how many times a visitor has visited a web page.Show his/her number of visits on your web page.
+// // For example: “You have visited this site N times”.
+// var visitCount = 14;
+// alert("You have visited this site " + visitCount + " times");
 
-// 3. Declare a variable called birthYear & assign to it your birth year.Show the following message in your browser:
-var birthYear = 2004;
-document.writeln("My birth year is " + birthYear + "<br>Data type of my declared variable is number");
+// // 3. Declare a variable called birthYear & assign to it your birth year.Show the following message in your browser:
+// var birthYear = 2004;
+// document.writeln("My birth year is " + birthYear + "<br>Data type of my declared variable is number");
 
-// 4. A visitor visits an online clothing store www.xyzClothing.com .Write a script to store in variables the following information about him/her:
-// a. Visitor’s name
-// b. Product title
-// c. Quantity i.e. how many products a visitor wants to order
-// Show the following message in your browser: “John Doe ordered 5 T-shirt(s) on XYZ Clothing store”.
-var visitorName = "Jamal Nadeem";
-var productTitle = "T-shirt(s)";
-var quantity = 5;
-document.writeln(visitorName + " ordered " + quantity + " " + productTitle + " on XYZ Clothing store.");
+// // 4. A visitor visits an online clothing store www.xyzClothing.com .Write a script to store in variables the following information about him/her:
+// // a. Visitor’s name
+// // b. Product title
+// // c. Quantity i.e. how many products a visitor wants to order
+// // Show the following message in your browser: “John Doe ordered 5 T-shirt(s) on XYZ Clothing store”.
+// var visitorName = "Jamal Nadeem";
+// var productTitle = "T-shirt(s)";
+// var quantity = 5;
+// document.writeln(visitorName + " ordered " + quantity + " " + productTitle + " on XYZ Clothing store.");
+
+// Chapter 4
+
+// // 1. Declare 3 variables in one statement.
+var var1, var2, var3;
+
+// // 2. Declare 5 legal & 5 illegal variable names.
+// // Legal variable names
+var legalName1;
+var legalName2;
+var legalName3;
+var legalName4;
+var legalName5;
+// // Illegal variable names
+// var 1illegalName;
+// var illegal-name;
+// var illegal name;
+// var illegal@name;
+// var illegal%name;
+
+// // 3. Display this in your browser:
+// // a) A heading stating “Rules for naming JS variables”
+document.writeln("<h1>Rules for naming JS variables</h1>");
+// // b) Variable names can only contain ______, ______, ______ and ______.For example $my_1stVariable
+document.writeln("Variable names can only contain letters, numbers, $, and _. For example: $my_1stVariable<br>");
+// // c) Variables must begin with a ______, ______ or _____.For example $name, _name or name
+document.writeln("Variables must begin with a letter, $ or _. For example: $name, _name or name<br>");
+// // d) Variable names are case _________
+document.writeln("Variable names are case sensitive<br>");
+// // e) Variable names should not be JS _________
+document.writeln("Variable names should not be JS keywords<br>");
