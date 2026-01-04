@@ -343,3 +343,7 @@ document.writeln("<tr><td>" + subejct2 + "</td><td>" + totalMarksPerSubject + "<
 document.writeln("<tr><td>" + subejct3 + "</td><td>" + totalMarksPerSubject + "</td><td>" + marks3 + "</td><td>" + ((marks3 / totalMarksPerSubject) * 100).toFixed(2) + "%</td></tr>");
 document.writeln("<tr><th>Total</th><th>" + totalMarks + "</th><th>" + marksObtained + "</th><th>" + percentage.toFixed(2) + "%</th></tr>");
 document.writeln("</table>");
+
+var subject1 = prompt("Enter name of Subject 1:");
+var subject2 = prompt("Enter name of Subject 2:");
+var subject3 = prompt("Enter name of Subject 3:");
