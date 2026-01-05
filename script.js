@@ -347,3 +347,7 @@ document.writeln("</table>");
 var subject1 = prompt("Enter name of Subject 1:");
 var subject2 = prompt("Enter name of Subject 2:");
 var subject3 = prompt("Enter name of Subject 3:");
+var subject4 = prompt("Enter name of Subject 4:");
+var totalMarksPerSubject = 100;
+var totalMarks = totalMarksPerSubject * 4;
+var marks1 = parseFloat(prompt("Enter marks obtained in " + subject1 + ":"));
