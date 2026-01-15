@@ -509,90 +509,90 @@
 // // // // Chapter 12-13
 
 // // // // 1. Write a program that takes a character (number or string) in a variable & checks whether the given input is a number, uppercase letter or lowercase letter. (Hint: ASCII codes:- A=65, Z=90, a=97, z=122, 0=48, 9=57).
-var char = prompt("Enter a character (number or letter):");
-var asciiCode = char.charCodeAt(0);
-if (asciiCode >= 48 && asciiCode <= 57) {
-    alert("The input is a number.");
-} else if (asciiCode >= 65 && asciiCode <= 90) {
-    alert("The input is an uppercase letter.");
-} else if (asciiCode >= 97 && asciiCode <= 122) {
-    alert("The input is a lowercase letter.");
-} else {
-    alert("The input is neither a number nor a letter.");
-}
+// var char = prompt("Enter a character (number or letter):");
+// var asciiCode = char.charCodeAt(0);
+// if (asciiCode >= 48 && asciiCode <= 57) {
+//     alert("The input is a number.");
+// } else if (asciiCode >= 65 && asciiCode <= 90) {
+//     alert("The input is an uppercase letter.");
+// } else if (asciiCode >= 97 && asciiCode <= 122) {
+//     alert("The input is a lowercase letter.");
+// } else {
+//     alert("The input is neither a number nor a letter.");
+// }
 
-// // // // 2. Write a JavaScript program that accepts two integers and displays the larger.Also show if the two integers are equal.
-var int1 = parseInt(prompt("Enter first integer:"));
-var int2 = parseInt(prompt("Enter second integer:"));
-if (int1 > int2) {
-    alert(int1 + " is the larger integer.");
-} else if (int2 > int1) {
-    alert(int2 + " is the larger integer.");
-} else {
-    alert("Both integers are equal.");
-}
+// // // // // 2. Write a JavaScript program that accepts two integers and displays the larger.Also show if the two integers are equal.
+// var int1 = parseInt(prompt("Enter first integer:"));
+// var int2 = parseInt(prompt("Enter second integer:"));
+// if (int1 > int2) {
+//     alert(int1 + " is the larger integer.");
+// } else if (int2 > int1) {
+//     alert(int2 + " is the larger integer.");
+// } else {
+//     alert("Both integers are equal.");
+// }
 
-// // // // 3. Write a program that takes input a number from user & state whether the number is positive, negative or zero.
-var number = parseFloat(prompt("Enter a number:"));
-if (number > 0) {
-    alert("The number is positive.");
-} else if (number < 0) {
-    alert("The number is negative.");
-} else {
-    alert("The number is zero.");
-}
+// // // // // 3. Write a program that takes input a number from user & state whether the number is positive, negative or zero.
+// var number = parseFloat(prompt("Enter a number:"));
+// if (number > 0) {
+//     alert("The number is positive.");
+// } else if (number < 0) {
+//     alert("The number is negative.");
+// } else {
+//     alert("The number is zero.");
+// }
 
-// // // // 4. Write a program that takes a character (i.e. string of length 1) and returns true if it is a vowel, false otherwise.
-var char = prompt("Enter a character:");
-var vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
-if (vowels.includes(char)) {
-    alert("True, it is a vowel.");
-} else {
-    alert("False, it is not a vowel.");
-}
+// // // // // 4. Write a program that takes a character (i.e. string of length 1) and returns true if it is a vowel, false otherwise.
+// var char = prompt("Enter a character:");
+// var vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+// if (vowels.includes(char)) {
+//     alert("True, it is a vowel.");
+// } else {
+//     alert("False, it is not a vowel.");
+// }
 
-// // // // 5. Write a program that
-// // // // a. Store correct password in a JS variable.
-// var correctPassword = "mypassword123";
-// // // // b. Ask user to enter his/her password
-// var userPassword = prompt("Enter your password:");
-// // // // c. Validate the two passwords:
-if (userPassword === "") {
-    alert("Please enter your password");
-}
-else if (userPassword === correctPassword) {
-    alert("Correct! The password you entered matches the original password");
-}
-else {
-    alert("Incorrect password");
-}
+// // // // // 5. Write a program that
+// // // // // a. Store correct password in a JS variable.
+// // var correctPassword = "mypassword123";
+// // // // // b. Ask user to enter his/her password
+// // var userPassword = prompt("Enter your password:");
+// // // // // c. Validate the two passwords:
+// if (userPassword === "") {
+//     alert("Please enter your password");
+// }
+// else if (userPassword === correctPassword) {
+//     alert("Correct! The password you entered matches the original password");
+// }
+// else {
+//     alert("Incorrect password");
+// }
 
-// // // // 6. This if/else statement does not work. Try to fix it:
-// 
+// // // // // 6. This if/else statement does not work. Try to fix it:
+// // 
 
-// corrected code:
-var greeting;
-var hour = 13;
-if (hour < 18) {
-    greeting = "Good day";
-} else {
-    greeting = "Good evening";
-}
+// // corrected code:
+// var greeting;
+// var hour = 13;
+// if (hour < 18) {
+//     greeting = "Good day";
+// } else {
+//     greeting = "Good evening";
+// }
 
-// // // // 7. Write a program that takes time as input from user in 24 hours clock format like: 1900 = 7pm.Then display the following message based on the time entered by user:
-var time = parseInt(prompt("Enter time in 24 hours format (e.g., 1900 for 7pm):"));
+// // // // // 7. Write a program that takes time as input from user in 24 hours clock format like: 1900 = 7pm.Then display the following message based on the time entered by user:
+// var time = parseInt(prompt("Enter time in 24 hours format (e.g., 1900 for 7pm):"));
 
-if (time >= 0 && time < 1200) {
-    alert("Good morning!");
-} else if (time >= 1200 && time < 1700) {
-    alert("Good afternoon!");
-} else if (time >= 1700 && time < 2100) {
-    alert("Good evening!");
-} else if (time >= 2100 && time <= 2359) {
-    alert("Good night!");
-} else {
-    alert("Invalid time format. Please enter a valid time in 24-hour format.");
-}
+// if (time >= 0 && time < 1200) {
+//     alert("Good morning!");
+// } else if (time >= 1200 && time < 1700) {
+//     alert("Good afternoon!");
+// } else if (time >= 1700 && time < 2100) {
+//     alert("Good evening!");
+// } else if (time >= 2100 && time <= 2359) {
+//     alert("Good night!");
+// } else {
+//     alert("Invalid time format. Please enter a valid time in 24-hour format.");
+// }
 
 // // // // Chapter 14-16
 // // // // 1. Declare an empty array using JS literal notation to store student names in future.
