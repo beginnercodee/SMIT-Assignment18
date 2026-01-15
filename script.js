@@ -597,3 +597,136 @@ if (time >= 0 && time < 1200) {
 // // // // Chapter 14-16
 // // // // 1. Declare an empty array using JS literal notation to store student names in future.
 var studentNames = [];
+// // // // 2. Declare an empty array using JS object notation to store student names in future.
+var studentNamesObj = new Array();
+// // // // 3. Declare and initialize a strings array.
+var stringArray = ["apple", "banana", "cherry"];
+// // // // 4. Declare and initialize a numbers array.
+var numbersArray = [1, 2, 3, 4, 5];
+// // // // 5. Declare and initialize a boolean array.
+var booleanArray = [true, false, true];
+// // // // 6. Declare and initialize a mixed array.
+var mixedArray = [1, "apple", true, 3.14];
+// // // // 7. Declare and Initialize an array and store available education qualifications in Pakistan (e.g. SSC, HSC, BCS, BS, BCOM, MS, M. Phil., PhD).Show the listed qualifications in your browser like:
+var qualifications = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"];
+document.writeln("<h1>Qualifications in Pakistan:</h1>");
+document.writeln("<ul>");
+for (var i = 0; i < qualifications.length; i++) {
+    document.writeln("<li>" + qualifications[i] + "</li>");
+}
+document.writeln("</ul>");
+// // // // 8. Write a program to store 3 student names in an array.Take another array to store score of these three students.Assume that total marks are 500 for each student, display the scores & percentages of students like:
+var studentNames = ["Jamal", "Ahmed", "Sara"];
+var studentScores = [400, 350, 450];
+var totalMarks = 500;
+for (var i = 0; i < studentNames.length; i++) {
+    var percentage = (studentScores[i] / totalMarks) * 100;
+    document.writeln("Score of " + studentNames[i] + " is " + studentScores[i] + ". Percentage: " + percentage + "%<br>");
+}
+// // // // 9. Initialize an array with color names. Display the array elements in your browser.
+var colors = ["Red", "Green", "Blue", "Yellow"];
+document.writeln("<h1>Colors:</h1>");
+for (var i = 0; i < colors.length; i++) {
+    document.writeln(colors[i] + "<br>");
+}
+// // // // a. Ask the user what color he/she wants to add to the beginning & add that color to the beginning of the array.Display the updated array in your browser.
+var colorToAddBeginning = prompt("Enter a color to add to the beginning of the array:");
+colors.unshift(colorToAddBeginning);
+document.writeln("<h1>Updated Colors (after adding to beginning):</h1>");
+for (var i = 0; i < colors.length; i++) {
+    document.writeln(colors[i] + "<br>");
+}
+// // // // b. Ask the user what color he/she wants to add to the end & add that color to the end of the array.Display the updated array in your browser.
+var colorToAddEnd = prompt("Enter a color to add to the end of the array:");
+colors.push(colorToAddEnd);
+document.writeln("<h1>Updated Colors (after adding to end):</h1>");
+for (var i = 0; i < colors.length; i++) {
+    document.writeln(colors[i] + "<br>");
+}
+// // // // c. Add two more colors to the beginning of the array.Display the updated array in your browser.
+var color1 = prompt("Enter first color to add to the beginning of the array:");
+var color2 = prompt("Enter second color to add to the beginning of the array:");
+colors.unshift(color1, color2);
+document.writeln("<h1>Updated Colors (after adding two to beginning):</h1>");
+for (var i = 0; i < colors.length; i++) {
+    document.writeln(colors[i] + "<br>");
+}
+// // // // d. Delete the first color in the array.Display the updated array in your browser.
+colors.shift();
+document.writeln("<h1>Updated Colors (after deleting first color):</h1>");
+for (var i = 0; i < colors.length; i++) {
+    document.writeln(colors[i] + "<br>");
+}
+// // // // e. Delete the last color in the array.Display the updated array in your browser.
+colors.pop();
+document.writeln("<h1>Updated Colors (after deleting last color):</h1>");
+for (var i = 0; i < colors.length; i++) {
+    document.writeln(colors[i] + "<br>");
+}
+// // // // f. Ask the user at which index he/she wants to add a color & color name.Then add the color to desired position & display the updated array in your browser.
+var indexToAdd = parseInt(prompt("Enter the index at which you want to add a color:"));
+var colorNameToAdd = prompt("Enter the color name to add:");
+colors.splice(indexToAdd, 0, colorNameToAdd);
+document.writeln("<h1>Updated Colors (after adding at index " + indexToAdd + "):</h1>");
+for (var i = 0; i < colors.length; i++) {
+    document.writeln(colors[i] + "<br>");
+}
+// // // // g. Ask the user at which index he/she wants to delete color(s) & how many colors he/she wants to delete.Then remove the same number of color(s) from user-defined position & display the updated array in your browser.
+var indexToDelete = parseInt(prompt("Enter the index from which you want to delete color(s):"));
+var numberOfColorsToDelete = parseInt(prompt("Enter the number of colors you want to delete:"));
+colors.splice(indexToDelete, numberOfColorsToDelete);
+document.writeln("<h1>Updated Colors (after deleting from index " + indexToDelete + "):</h1>");
+for (var i = 0; i < colors.length; i++) {
+    document.writeln(colors[i] + "<br>");
+}
+// // // // 10. Write a program to store student scores in an array & sort the array in ascending order using Array’s sort method.
+var studentScores = [320, 230, 480, 120];
+document.writeln("<h1>Student Scores (Original):</h1>");
+document.writeln(studentScores.join(", ") + "<br>");
+studentScores.sort(function(a, b){
+    return a-b
+});
+document.writeln("<h1>Student Scores (Sorted in Ascending Order):</h1>");
+document.writeln(studentScores.join(", ") + "<br>");
+// // // // 11. Write a program to initialize an array with city names.Copy 3 array elements from cities array to selectedCities array.
+var cities = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
+var selectedCities = cities.slice(2, 5);
+document.writeln("<h1>Cities:</h1>");
+document.writeln("All Cities: " + cities.join(", ") + "<br>");
+document.writeln("Selected Cities: " + selectedCities.join(", ") + "<br>");
+// // // // 12. Write a program to create a single string from the below mentioned array:
+var arr = ["This", "is", "my", "cat"];
+var singleString = arr.join(" ");
+document.writeln("<h1>Array to String:</h1>");
+document.writeln("Array: " + arr.join(", ") + "<br>");
+document.writeln("String: " + singleString + "<br>");
+// // // // 13. Create a new array. Store values one by one in such a way that you can access the values in the order in which they were stored. (FIFO-First In First Out)
+var fifoArray = [];
+fifoArray.push("Keyboard");
+fifoArray.push("Mouse");
+fifoArray.push("Printer");
+fifoArray.push("Monitor");
+document.writeln("<h1>FIFO (First In First Out):</h1>");
+document.writeln("Devices:<br>");
+while (fifoArray.length > 0) {
+    document.writeln(fifoArray.shift() + "<br>");
+}
+// // // // 14. Create a new array. Store values one by one in such a way that you can access the values in reverse order. (LIFO-Last In First Out)
+var lifoArray = [];
+lifoArray.push("Keyboard");
+lifoArray.push("Mouse");
+lifoArray.push("Printer");
+lifoArray.push("Monitor");
+document.writeln("<h1>LIFO (Last In First Out):</h1>");
+document.writeln("Devices:<br>");
+while (lifoArray.length > 0) {
+    document.writeln(lifoArray.pop() + "<br>");
+}
+// // // // 15. Write a program to store phone manufacturers (Apple, Samsung, Motorola, Nokia, Sony & Haier) in an array.Write a program to display the following dropdown/select menu in your browser using document.write() method:
+var phoneManufacturers = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+document.writeln("<h1>Phone Manufacturers:</h1>");
+document.writeln("<select>");
+for (var i = 0; i < phoneManufacturers.length; i++) {
+    document.writeln("<option>" + phoneManufacturers[i] + "</option>");
+}
+document.writeln("</select>");
