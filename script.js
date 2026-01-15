@@ -594,5 +594,6 @@ if (time >= 0 && time < 1200) {
     alert("Invalid time format. Please enter a valid time in 24-hour format.");
 }
 
-
-
+// // // // Chapter 14-16
+// // // // 1. Declare an empty array using JS literal notation to store student names in future.
+var studentNames = [];
