@@ -730,3 +730,13 @@ for (var i = 0; i < phoneManufacturers.length; i++) {
     document.writeln("<option>" + phoneManufacturers[i] + "</option>");
 }
 document.writeln("</select>");
+
+// // // // Chapter 17-20
+// // // // 1. Declare and initialize an empty multidimensional array.
+var multiArray = [[]];
+// // // // 2. Declare and initialize a multidimensional array representing the following matrix:
+var matrix = [
+    [0, 1, 2, 3],
+    [1, 0, 1, 2],
+    [2, 1, 0, 1]
+];
