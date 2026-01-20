@@ -740,3 +740,8 @@ var matrix = [
     [1, 0, 1, 2],
     [2, 1, 0, 1]
 ];
+// // // // 3. Write a program to print numeric counting from 1 to 10.
+document.writeln("<h1>Numeric Counting from 1 to 10:</h1>");
+for (var i = 1; i <= 10; i++) {
+    document.writeln(i + "<br>");
+}
