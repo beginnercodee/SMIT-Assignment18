@@ -745,3 +745,9 @@ document.writeln("<h1>Numeric Counting from 1 to 10:</h1>");
 for (var i = 1; i <= 10; i++) {
     document.writeln(i + "<br>");
 }
+
+var fruits = ["apple", "banana", "mango", "orange", "strawberry"];
+
+for (var i = 0; i < fruits.length; i++) {
+    document.writeln(fruits[i] + "<br>");
+}
