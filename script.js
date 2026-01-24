@@ -821,3 +821,4 @@ document.writeln("<h1>Multiples of 5 from 1 to 100:</h1>");
 for (var i = 5; i <= 100; i += 5) {
     document.writeln(i + ", ");
 }
+
