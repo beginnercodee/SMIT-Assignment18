@@ -961,59 +961,167 @@
 // document.writeln("<h1>Word Occurrence Count:</h1>");
 // document.writeln("The word '" + wordToCount + "' occurs " + count + " times in the given string.<br>"); 
 
-// // // // // Chapter 26-30
-// // // // // 1. Write a program that takes a positive integer from user & display the following in your browser:
-var positiveInteger = parseInt(prompt("Enter a positive integer:"));
-document.writeln("<h1>Number Analysis:</h1>");
-document.writeln("Number: " + positiveInteger + "<br>");
-document.writeln("Round off value: " + Math.round(positiveInteger) + "<br>");
-document.writeln("Floor value: " + Math.floor(positiveInteger) + "<br>");
-document.writeln("Ceil value: " + Math.ceil(positiveInteger) + "<br>");
+// // // // // // Chapter 26-30
+// // // // // // 1. Write a program that takes a positive integer from user & display the following in your browser:
+// var positiveInteger = parseInt(prompt("Enter a positive integer:"));
+// document.writeln("<h1>Number Analysis:</h1>");
+// document.writeln("Number: " + positiveInteger + "<br>");
+// document.writeln("Round off value: " + Math.round(positiveInteger) + "<br>");
+// document.writeln("Floor value: " + Math.floor(positiveInteger) + "<br>");
+// document.writeln("Ceil value: " + Math.ceil(positiveInteger) + "<br>");
 
-// // // // // 2. Write a program that takes a negative floating point number from user & display the following in your browser:
-var negativeFloat = parseFloat(prompt("Enter a negative floating point number:"));
-document.writeln("<h1>Number Analysis:</h1>");
-document.writeln("Number: " + negativeFloat + "<br>");
-document.writeln("Round off value: " + Math.round(negativeFloat) + "<br>");
-document.writeln("Floor value: " + Math.floor(negativeFloat) + "<br>");
-document.writeln("Ceil value: " + Math.ceil(negativeFloat) + "<br>");
+// // // // // // 2. Write a program that takes a negative floating point number from user & display the following in your browser:
+// var negativeFloat = parseFloat(prompt("Enter a negative floating point number:"));
+// document.writeln("<h1>Number Analysis:</h1>");
+// document.writeln("Number: " + negativeFloat + "<br>");
+// document.writeln("Round off value: " + Math.round(negativeFloat) + "<br>");
+// document.writeln("Floor value: " + Math.floor(negativeFloat) + "<br>");
+// document.writeln("Ceil value: " + Math.ceil(negativeFloat) + "<br>");
 
-// // // // // 3. Write a program that displays the absolute value of a number. E.g. absolute value of -4 is 4 & absolute value of 5 is 5.
-var numberToAbs = parseFloat(prompt("Enter a number to find its absolute value:"));
-var absoluteValue = Math.abs(numberToAbs);
-document.writeln("<h1>Absolute Value:</h1>");
-document.writeln("The absolute value of " + numberToAbs + " is: " + absoluteValue + "<br>");
+// // // // // // 3. Write a program that displays the absolute value of a number. E.g. absolute value of -4 is 4 & absolute value of 5 is 5.
+// var numberToAbs = parseFloat(prompt("Enter a number to find its absolute value:"));
+// var absoluteValue = Math.abs(numberToAbs);
+// document.writeln("<h1>Absolute Value:</h1>");
+// document.writeln("The absolute value of " + numberToAbs + " is: " + absoluteValue + "<br>");
 
-// // // // // 4. Write a program that simulates a dice using random() method of JS Math class. Display the value of dice in your browser.
-var diceValue = Math.floor(Math.random() * 6) + 1;
-document.writeln("<h1>Dice Simulation:</h1>");
-document.writeln("You rolled a " + diceValue + "<br>");
+// // // // // // 4. Write a program that simulates a dice using random() method of JS Math class. Display the value of dice in your browser.
+// var diceValue = Math.floor(Math.random() * 6) + 1;
+// document.writeln("<h1>Dice Simulation:</h1>");
+// document.writeln("You rolled a " + diceValue + "<br>");
 
-// // // // // 5. Write a program that simulates a coin toss using random() method of JS Math class. Display the value of coin in your browser.
-var coinToss = Math.random() < 0.5 ? "Heads" : "Tails";
-document.writeln("<h1>Coin Toss Simulation:</h1>");
-document.writeln("You got: " + coinToss + "<br>");
+// // // // // // 5. Write a program that simulates a coin toss using random() method of JS Math class. Display the value of coin in your browser.
+// var coinToss = Math.random() < 0.5 ? "Heads" : "Tails";
+// document.writeln("<h1>Coin Toss Simulation:</h1>");
+// document.writeln("You got: " + coinToss + "<br>");
 
-// // // // // 6. Write a program that shows a random number between 1 and 100 in your browser.
-var randomNumber = Math.floor(Math.random() * 100) + 1;
-document.writeln("<h1>Random Number:</h1>");
-document.writeln("Random number between 1 and 100: " + randomNumber + "<br>");
+// // // // // // 6. Write a program that shows a random number between 1 and 100 in your browser.
+// var randomNumber = Math.floor(Math.random() * 100) + 1;
+// document.writeln("<h1>Random Number:</h1>");
+// document.writeln("Random number between 1 and 100: " + randomNumber + "<br>");
 
-// // // // // 7. Write a program that asks the user about his weight. Parse the user input and display his weight in your browser. Possible user inputs can be:
-// // a. 50
-// // b. 50kgs
-// // c. 50.2kgs
-// // d. 50.2kilograms
-var weightInput = prompt("Enter your weight (e.g., 50, 50kgs, 50.2kgs, 50.2kilograms):");
-var weight = parseFloat(weightInput);
-document.writeln("<h1>Weight Display:</h1>");
-document.writeln("Your weight is: " + weight + " kilograms<br>");
+// // // // // // 7. Write a program that asks the user about his weight. Parse the user input and display his weight in your browser. Possible user inputs can be:
+// // // a. 50
+// // // b. 50kgs
+// // // c. 50.2kgs
+// // // d. 50.2kilograms
+// var weightInput = prompt("Enter your weight (e.g., 50, 50kgs, 50.2kgs, 50.2kilograms):");
+// var weight = parseFloat(weightInput);
+// document.writeln("<h1>Weight Display:</h1>");
+// document.writeln("Your weight is: " + weight + " kilograms<br>");
 
-// // // // // 8. Write a program that stores a random secret number from 1 to 10 in a variable. Ask the user to input a number between 1 and 10. If the user input equals the secret number, congratulate the user.
-var secretNumber = Math.floor(Math.random() * 10) + 1;
-var userGuess = parseInt(prompt("Guess the secret number (between 1 and 10):"));
-if (userGuess === secretNumber) {
-    alert("Congratulations! You guessed the secret number.");
-} else {
-    alert("Sorry, the secret number was " + secretNumber + ". Try again!");
+// // // // // // 8. Write a program that stores a random secret number from 1 to 10 in a variable. Ask the user to input a number between 1 and 10. If the user input equals the secret number, congratulate the user.
+// var secretNumber = Math.floor(Math.random() * 10) + 1;
+// var userGuess = parseInt(prompt("Guess the secret number (between 1 and 10):"));
+// if (userGuess === secretNumber) {
+//     alert("Congratulations! You guessed the secret number.");
+// } else {
+//     alert("Sorry, the secret number was " + secretNumber + ". Try again!");
+// }
+
+// // // // // Chapter 31-34
+// // // // // 1. Write a program that displays current date and time in your browser.
+var currentDate = new Date();
+document.writeln("<h1>Current Date and Time:</h1>");
+document.writeln(currentDate.toString() + "<br>");
+
+// // // // // 2. Write a program that alerts the current month in words. For example December.
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var currentMonth = months[currentDate.getMonth()];
+alert("Current month: " + currentMonth);
+
+// // // // // 3. Write a program that alerts the first 3 letters of the current day, for example if today is Sunday then alert will show Sun.
+var days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+var currentDay = days[currentDate.getDay()];
+alert("Today is: " + currentDay);
+
+// // // // // 4. Write a program that displays a message “It’s Fun day” if its Saturday or Sunday today.
+if (currentDay === "Sat" || currentDay === "Sun") {
+    alert("It's Fun day!");
 }
+
+// // // // // 5. Write a program that shows the message “First fifteen days of the month” if the date is less than 16th of the month else shows “Last days of the month”.
+var currentDateOfMonth = currentDate.getDate();
+if (currentDateOfMonth < 16) {
+    alert("First fifteen days of the month");
+} else {
+    alert("Last days of the month");
+}
+
+// // // // // 6. Write a program that determines the minutes since midnight, Jan. 1, 1970 and assigns it to a variable that hasn't been declared beforehand. Use any variable you like to represent the Date object.
+var minutesSinceEpoch = Math.floor(currentDate.getTime() / (1000 * 60));
+document.writeln("<h1>Minutes Since Epoch:</h1>");
+document.writeln("Minutes since midnight, Jan. 1, 1970: " + minutesSinceEpoch + "<br>");
+
+// // // // // 7. Write a program that tests whether it's before noon and alert “Its AM” else “its PM”.
+var hours = currentDate.getHours();
+if (hours < 12) {
+    alert("It's AM");
+} else {
+    alert("It's PM");
+}
+
+// // // // // 8. Write a program that creates a Date object for the last day of the month and assigns it to variable named laterDate. Show the value of laterDate in your browser.
+var laterDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
+document.writeln("<h1>Later Date:</h1>");
+document.writeln("Last day of the month: " + laterDate.toString() + "<br>");
+
+// // // // // 9. Create a date object of the starting date of this Ramadan and alert the number of days past since 1st Ramadan?
+var ramadanStartDate = new Date("April 13, 2021");
+var currentDate = new Date();
+var timeDifference = currentDate.getTime() - ramadanStartDate.getTime();
+var daysPast = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+alert(daysPast + " days have passed since the start of Ramadan.");
+
+// // // // // 10. Write a program that displays in your browser the seconds that elapsed between the reference date and the beginning of 2015.
+var referenceDate = new Date("January 1, 2015");
+var currentDate = new Date();
+var timeDifferenceSeconds = Math.floor((currentDate.getTime() - referenceDate.getTime()) / 1000);
+document.writeln("<h1>Seconds Elapsed Since January 1, 2015:</h1>");
+document.writeln("Seconds elapsed: " + timeDifferenceSeconds + " seconds<br>");
+
+// // // // // 11. Create a Date object for the current date and time. Extract the hours, reset the date object an hour ahead and finally display the date object in your browser.
+var currentDateTime = new Date();
+var currentHours = currentDateTime.getHours();
+currentDateTime.setHours(currentHours + 1);
+document.writeln("<h1>Date Object One Hour Ahead:</h1>");
+document.writeln("Current date and time: " + new Date() + "<br>");
+document.writeln("Date and time one hour ahead: " + currentDateTime + "<br>");
+
+// // // // // 12. Write a program that creates a date object and show the date in an alert box that is reset to 100 years back?
+var currentDate = new Date();
+currentDate.setFullYear(currentDate.getFullYear() - 100);
+alert("Date 100 years back: " + currentDate.toString());
+
+// // // // // 13. Write a program to ask the user about his age. Calculate and show his birth year in your browser.
+var userAge = parseInt(prompt("Enter your age:"));
+var currentYear = new Date().getFullYear();
+var birthYear = currentYear - userAge;
+document.writeln("<h1>Birth Year Calculation:</h1>");
+document.writeln("Your age: " + userAge + "<br>");
+document.writeln("Your birth year is: " + birthYear + "<br>");
+
+
+// // // // // 14. Write a program to generate your K-Electric bill in your browser. All the amounts should be rounded off to 2 decimal places. Display the following fields:
+// a. Customer Name
+// b. Current Month
+// c. Number of units
+// d. Charges per unit
+// e. Net Amount Payable (within Due Date)
+// f. Late Payment Surcharge
+// g. Gross Amount Payable (after Due Date)
+var customerName = prompt("Enter customer name:");
+var currentMonth = months[new Date().getMonth()];
+var numberOfUnits = parseFloat(prompt("Enter number of units consumed:"));
+var chargesPerUnit = 16;
+var netAmountPayable = (numberOfUnits * chargesPerUnit).toFixed(2);
+var latePaymentSurcharge = 350;
+var grossAmountPayable = (parseFloat(netAmountPayable) + latePaymentSurcharge).toFixed(2);
+document.writeln("<h1>K-Electric Bill:</h1>");
+document.writeln("Customer Name: " + customerName + "<br>");
+document.writeln("Current Month: " + currentMonth + "<br>");
+document.writeln("Number of Units: " + numberOfUnits + "<br>");
+document.writeln("Charges per Unit: " + chargesPerUnit.toFixed(2) + "<br>");
+document.writeln("Net Amount Payable (within Due Date): " + netAmountPayable + "<br>");
+document.writeln("Late Payment Surcharge: " + latePaymentSurcharge.toFixed(2) + "<br>");
+document.writeln("Gross Amount Payable (after Due Date): " + grossAmountPayable + "<br>");
+
