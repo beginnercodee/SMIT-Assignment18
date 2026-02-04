@@ -731,94 +731,232 @@
 // }
 // document.writeln("</select>");
 
-// // // // Chapter 17-20
-// // // // 1. Declare and initialize an empty multidimensional array.
-var multiArray = [[]];
-// // // // 2. Declare and initialize a multidimensional array representing the following matrix:
-var matrix = [
-    [0, 1, 2, 3],
-    [1, 0, 1, 2],
-    [2, 1, 0, 1]
-];
-// // // // 3. Write a program to print numeric counting from 1 to 10.
-document.writeln("<h1>Numeric Counting from 1 to 10:</h1>");
-for (var i = 1; i <= 10; i++) {
-    document.writeln(i + "<br>");
+// // // // // Chapter 17-20
+// // // // // 1. Declare and initialize an empty multidimensional array.
+// var multiArray = [[]];
+// // // // // 2. Declare and initialize a multidimensional array representing the following matrix:
+// var matrix = [
+//     [0, 1, 2, 3],
+//     [1, 0, 1, 2],
+//     [2, 1, 0, 1]
+// ];
+// // // // // 3. Write a program to print numeric counting from 1 to 10.
+// document.writeln("<h1>Numeric Counting from 1 to 10:</h1>");
+// for (var i = 1; i <= 10; i++) {
+//     document.writeln(i + "<br>");
+// }
+// // // // // 4. Write a program to print multiplication table of any number using for loop. Table number & length should be taken as an input from user.
+// var tableNum = parseInt(prompt("Enter a number to show its multiplication table:"));
+// var tableLength = parseInt(prompt("Enter the length of the multiplication table:"));
+// document.writeln("<h1>Multiplication Table of " + tableNum + ":</h1>");
+// for (var i = 1; i <= tableLength; i++) {
+//     document.writeln(tableNum + " x " + i + " = " + (tableNum * i) + "<br>");
+// }
+// // // // // 5. Write a program to print items of the following array using for loop:
+// var fruits = ["apple", "banana", "mango", "orange", "strawberry"];
+// document.writeln("<h1>Fruits:</h1>");
+// for (var i = 0; i < fruits.length; i++) {
+//     document.writeln(fruits[i] + "<br>");
+// }
+// document.writeln("<br>");
+// for (var i = 0; i < fruits.length; i++) {
+//     document.writeln("Element at index " + i + " is " + fruits[i] + "<br>");
+// }
+// // // // // 6. Generate the following series in your browser. See example output.
+// document.writeln("<h1>Counting:</h1>");
+// for (var i = 1; i <= 15; i++) {
+//     document.writeln(i + ", ");
+// }
+// document.writeln("<h1>Reverse Counting:</h1>");
+// for (var i = 10; i >= 1; i--) {
+//     document.writeln(i + ", ");
+// }
+// document.writeln("<h1>Even:</h1>");
+// for (var i = 0; i <= 20; i += 2) {
+//     document.writeln(i + ", ");
+// }
+// document.writeln("<h1>Odd:</h1>");
+// for (var i = 1; i < 20; i += 2) {
+//     document.writeln(i + ", ");
+// }
+// document.writeln("<h1>Series:</h1>");
+// for (var i = 2; i <= 20; i += 2) {
+//     document.writeln(i + "k, ");
+// }
+// // // // // 7. Write a program to enable “search by user input” in an array.
+// var bakeryItems = ["cake", "apple pie", "cookie", "chips", "patties"];
+// var userSearch = prompt("Welcome to ABC Bakery. What do you want to order sir/ma'am?");
+// var found = false;
+// for (var i = 0; i < bakeryItems.length; i++) {
+//     if (bakeryItems[i].toLowerCase() === userSearch.toLowerCase()) {
+//         alert(userSearch + " is available at index " + i + " in our bakery.");
+//         found = true;
+//         break;
+//     }
+// }
+// if (!found) {
+//     alert("We are sorry. " + userSearch + " is not available in our bakery.");
+// }
+// // // // // 8. Write a program to identify the largest number in the given array.
+// var numbers = [24, 53, 78, 91, 12];
+// var largestNumber = numbers[0];
+// for (var i = 1; i < numbers.length; i++) {
+//     if (numbers[i] > largestNumber) {
+//         largestNumber = numbers[i];
+//     }
+// }
+// document.writeln("<h1>Largest Number:</h1>");
+// document.writeln("The largest number in the array is: " + largestNumber);
+// // // // // 9. Write a program to identify the smallest number in the given array.
+// var smallestNumber = numbers[0];
+// for (var i = 1; i < numbers.length; i++) {
+//     if (numbers[i] < smallestNumber) {
+//         smallestNumber = numbers[i];
+//     }
+// }
+// document.writeln("<h1>Smallest Number:</h1>");
+// document.writeln("The smallest number in the array is: " + smallestNumber);
+// // // // // 10. Write a program to print multiples of 5 ranging from 1 to 100.
+// document.writeln("<h1>Multiples of 5 from 1 to 100:</h1>");
+// for (var i = 5; i <= 100; i += 5) {
+//     document.writeln(i + ", ");
+// }
+
+// // // // Chapter 21-25
+// // // // 1. Write a program that takes two user inputs for first and last name using prompt and merge them in a new variable titled fullName. Greet the user using his full name.
+var firstName = prompt("Enter your first name:");
+var lastName = prompt("Enter your last name:");
+var fullName = firstName + " " + lastName;
+alert("Hello, " + fullName + "! Welcome to our website.");
+
+// // // // 2. Write a program to take a user input about his favorite mobile phone model. Find and display the length of user input in your browser
+var favoritePhone = prompt("Enter your favorite mobile phone model:");
+var inputLength = favoritePhone.length;
+document.writeln("<h1>Favorite Mobile Phone Model:</h1>");
+document.writeln("Your favorite mobile phone model is: " + favoritePhone + "<br>");
+document.writeln("Length of your input: " + inputLength + " characters<br>");
+
+// // // // 3. Write a program to find the index of letter “n” in the word “Pakistani” and display the result in your browser.
+var word = "Pakistani";
+var indexOfN = word.indexOf("n");
+document.writeln("<h1>Index of 'n' in 'Pakistani':</h1>");
+document.writeln("The index of letter 'n' in the word 'Pakistani' is: " + indexOfN + "<br>");
+
+// // // // 4. Write a program to find the last index of letter “l” in the word “Hello World” and display the result in your browser.
+var phrase = "Hello World";
+var lastIndexOfL = phrase.lastIndexOf("l");
+document.writeln("<h1>Last Index of 'l' in 'Hello World':</h1>");
+document.writeln("The last index of letter 'l' in the phrase 'Hello World' is: " + lastIndexOfL + "<br>");
+
+// // // // 5. Write a program to find the character at 3rd index in the word “Pakistani” and display the result in your browser.
+var charAtIndex3 = word.charAt(3);
+document.writeln("<h1>Character at Index 3 in 'Pakistani':</h1>");
+document.writeln("The character at index 3 in the word 'Pakistani' is: " + charAtIndex3 + "<br>");
+
+// // // // 6. Repeat Q1 using string concat() method.
+var fullNameConcat = firstName.concat(" ", lastName);
+alert("Hello, " + fullNameConcat + "! Welcome to our website.");
+
+// // // // 7. Write a program to replace the “Hyder” with “Islam” in the word “Hyderabad” and display the result in your browser.
+var city = "Hyderabad";
+var newCity = city.replace("Hyder", "Islam");
+document.writeln("<h1>City Name Replacement:</h1>");
+document.writeln("Original city name: " + city + "<br>");
+document.writeln("New city name: " + newCity + "<br>");
+
+// // // // 8. Write a program to replace all occurrences of “and” with “&” in the string “Ali and Sami are best friends. They play cricket and football together.” Display the result in your browser.
+var sentence = "Ali and Sami are best friends. They play cricket and football together.";
+var newSentence = sentence.replace(/and/g, "&");
+document.writeln("<h1>String Replacement:</h1>");
+document.writeln("Original sentence: " + sentence + "<br>");
+document.writeln("New sentence: " + newSentence + "<br>");
+
+// // // // 9. Write a program that converts a string “472” to a number 472. Display the values & types in your browser.
+var strNumber = "472";
+var numNumber = parseInt(strNumber);
+document.writeln("<h1>String to Number Conversion:</h1>");
+document.writeln("String value: " + strNumber + " (type: " + typeof strNumber + ")<br>");
+document.writeln("Number value: " + numNumber + " (type: " + typeof numNumber + ")<br>");
+
+// // // // 10. Write a program that takes user input. Convert and show the input in capital letters.
+var userInput = prompt("Enter a string to convert to uppercase:");
+var upperCaseInput = userInput.toUpperCase();
+document.writeln("<h1>Uppercase Conversion:</h1>");
+document.writeln("Original input: " + userInput + "<br>");
+document.writeln("Uppercase input: " + upperCaseInput + "<br>");
+
+// // // // 11. Write a program that takes user input. Convert and show the input in title case.
+var titleCaseInput = userInput.toLowerCase().split(" ").map(function(word) {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+}).join(" ");
+document.writeln("<h1>Title Case Conversion:</h1>");
+document.writeln("Original input: " + userInput + "<br>");
+document.writeln("Title case input: " + titleCaseInput + "<br>");
+
+// // // // 12. Write a program that converts the variable num to string. var num = 35. Show the result in your browser.
+var num = 35;
+var strNum = num.toString();
+document.writeln("<h1>Number to String Conversion:</h1>");
+document.writeln("Number value: " + num + " (type: " + typeof num + ")<br>");
+document.writeln("String value: " + strNum + " (type: " + typeof strNum + ")<br>");
+
+// // // // 13. Write a program that takes user input and stores username in a variable. If the username contains any special symbol among [@ . , !], prompt the user to enter a valid username. For character codes of [@ . , !] - refer to ASCII table at the end of this document.
+var username = prompt("Enter a username:");
+var specialSymbols = /[@.,!]/;
+if (specialSymbols.test(username)) {
+    alert("Please enter a valid username without special symbols [@ . , !]");
+} else {
+    alert("Username is valid.");
 }
-// // // // 4. Write a program to print multiplication table of any number using for loop. Table number & length should be taken as an input from user.
-var tableNum = parseInt(prompt("Enter a number to show its multiplication table:"));
-var tableLength = parseInt(prompt("Enter the length of the multiplication table:"));
-document.writeln("<h1>Multiplication Table of " + tableNum + ":</h1>");
-for (var i = 1; i <= tableLength; i++) {
-    document.writeln(tableNum + " x " + i + " = " + (tableNum * i) + "<br>");
-}
-// // // // 5. Write a program to print items of the following array using for loop:
-var fruits = ["apple", "banana", "mango", "orange", "strawberry"];
-document.writeln("<h1>Fruits:</h1>");
-for (var i = 0; i < fruits.length; i++) {
-    document.writeln(fruits[i] + "<br>");
-}
-document.writeln("<br>");
-for (var i = 0; i < fruits.length; i++) {
-    document.writeln("Element at index " + i + " is " + fruits[i] + "<br>");
-}
-// // // // 6. Generate the following series in your browser. See example output.
-document.writeln("<h1>Counting:</h1>");
-for (var i = 1; i <= 15; i++) {
-    document.writeln(i + ", ");
-}
-document.writeln("<h1>Reverse Counting:</h1>");
-for (var i = 10; i >= 1; i--) {
-    document.writeln(i + ", ");
-}
-document.writeln("<h1>Even:</h1>");
-for (var i = 0; i <= 20; i += 2) {
-    document.writeln(i + ", ");
-}
-document.writeln("<h1>Odd:</h1>");
-for (var i = 1; i < 20; i += 2) {
-    document.writeln(i + ", ");
-}
-document.writeln("<h1>Series:</h1>");
-for (var i = 2; i <= 20; i += 2) {
-    document.writeln(i + "k, ");
-}
-// // // // 7. Write a program to enable “search by user input” in an array.
-var bakeryItems = ["cake", "apple pie", "cookie", "chips", "patties"];
-var userSearch = prompt("Welcome to ABC Bakery. What do you want to order sir/ma'am?");
-var found = false;
-for (var i = 0; i < bakeryItems.length; i++) {
-    if (bakeryItems[i].toLowerCase() === userSearch.toLowerCase()) {
-        alert(userSearch + " is available at index " + i + " in our bakery.");
-        found = true;
+
+// // // // 14. You have an array A = [cake”, “apple pie”, “cookie”, “chips”, “patties”] Write a program to enable “search by user input” in an array. After searching, prompt the user whether the given item is found in the list or not.
+var items = ["cake", "apple pie", "cookie", "chips", "patties"];
+var userSearchItem = prompt("Welcome to ABC Bakery. What do you want to order sir/ma'am?");
+var itemFound = false;
+for (var i = 0; i < items.length; i++) {
+    if (items[i].toLowerCase() === userSearchItem.toLowerCase()) {
+        alert(userSearchItem + " is available at index " + i + " in our bakery.");
+        itemFound = true;
         break;
     }
 }
-if (!found) {
-    alert("We are sorry. " + userSearch + " is not available in our bakery.");
-}
-// // // // 8. Write a program to identify the largest number in the given array.
-var numbers = [24, 53, 78, 91, 12];
-var largestNumber = numbers[0];
-for (var i = 1; i < numbers.length; i++) {
-    if (numbers[i] > largestNumber) {
-        largestNumber = numbers[i];
-    }
-}
-document.writeln("<h1>Largest Number:</h1>");
-document.writeln("The largest number in the array is: " + largestNumber);
-// // // // 9. Write a program to identify the smallest number in the given array.
-var smallestNumber = numbers[0];
-for (var i = 1; i < numbers.length; i++) {
-    if (numbers[i] < smallestNumber) {
-        smallestNumber = numbers[i];
-    }
-}
-document.writeln("<h1>Smallest Number:</h1>");
-document.writeln("The smallest number in the array is: " + smallestNumber);
-// // // // 10. Write a program to print multiples of 5 ranging from 1 to 100.
-document.writeln("<h1>Multiples of 5 from 1 to 100:</h1>");
-for (var i = 5; i <= 100; i += 5) {
-    document.writeln(i + ", ");
+if (!itemFound) {
+    alert("We are sorry. " + userSearchItem + " is not available in our bakery.");
 }
 
+// // // // 15. Write a program to take password as input from user. The password must qualify these requirements:
+// a. It should contain at least 6 characters.
+// b. It should contain both alphabets and numbers.
+// c. It should not start with a number.
+var password = prompt("Enter a password:");
+var passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+if (!passwordPattern.test(password)) {
+    alert("Password must be at least 6 characters long and contain both letters and numbers.");
+} else if (/^\d/.test(password)) {
+    alert("Password should not start with a number.");
+} else {
+    alert("Password is valid.");
+}
+
+// // // // 16. Write a program to convert the following string to an array using string split method. var university = “University of Karachi”; Display the elements of array in your browser.
+var university = "University of Karachi";
+var universityArray = university.split(" ");
+document.writeln("<h1>University Array:</h1>");
+for (var i = 0; i < universityArray.length; i++) {
+    document.writeln(universityArray[i] + "<br>");
+}
+
+// // // // 17. Write a program to display the last character of a user input.
+var userInputLastChar = prompt("Enter a string to find its last character:");
+var lastCharacter = userInputLastChar.charAt(userInputLastChar.length - 1);
+document.writeln("<h1>Last Character:</h1>");
+document.writeln("The last character of your input is: " + lastCharacter + "<br>");
+
+// // // // 18. You have a string “The quick brown fox jumps over the lazy dog”. Write a program to count number of occurrences of word “the” in given string.
+var text = "The quick brown fox jumps over the lazy dog";
+var wordToCount = "the";
+var regex = new RegExp(wordToCount, "gi");
+var matches = text.match(regex);
+var count = matches ? matches.length : 0;
+document.writeln("<h1>Word Occurrence Count:</h1>");
+document.writeln("The word '" + wordToCount + "' occurs " + count + " times in the given string.<br>"); 
