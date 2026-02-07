@@ -1265,3 +1265,9 @@ function calcCircumference(radius) {
 function calcArea(radius) {
     return Math.PI * radius * radius;
 }
+
+// // // // // // Chapter 38-42
+// // // // // // 1. Write a function that computes the power of a number. E.g. power(2,3) should return 8.
+function power(base, exponent) {
+    return Math.pow(base, exponent);
+}
