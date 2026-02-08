@@ -1266,8 +1266,15 @@ function calcArea(radius) {
     return Math.PI * radius * radius;
 }
 
-// // // // // // Chapter 38-42
-// // // // // // 1. Write a function that computes the power of a number. E.g. power(2,3) should return 8.
-function power(base, exponent) {
-    return Math.pow(base, exponent);
-}
+// // // // // // // Chapter 38-42
+// // // // // // // 1. Write a function that computes the power of a number. E.g. power(2,3) should return 8.
+// function power(base, exponent) {
+//     return Math.pow(base, exponent);
+// }
+
+// // // // // // // 2. Any year is entered through the keyboard. Write a function to determine whether the year is a leap year or not.
+// function isLeapYear(year) {
+//     if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+//         return true;
+//     } else {        return false;
+//     }}  
