@@ -1277,4 +1277,8 @@ function calcArea(radius) {
 //     if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
 //         return true;
 //     } else {        return false;
-//     }}  
+//     }}
+// // // // // // // 3. Write a function that takes three arguments and returns the largest of them.
+// function findLargest(num1, num2, num3) {
+//     return Math.max(num1, num2, num3);
+// }
