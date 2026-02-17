@@ -1395,3 +1395,43 @@ function decreaseCounter() {
     counterValue--;
     document.getElementById("counter").innerText = counterValue;
 }
+// // // // // // // Chapter 49-52
+// // // // // // // 1. Create a signup form and display form data in your web page on submission.
+function displayFormData() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    document.getElementById("formData").innerHTML = "<h2>Form Data:</h2><p>Name: " + name + "</p><p>Email: " + email + "</p><p>Password: " + password + "</p>";
+}
+// // // // // // // 2. Suppose in your webpage there is content area in which you have entered your item details, but user can only see some details on first look. When user clicks on “Read more” button, full detail of that particular item will be displayed.
+function readMore() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("readMoreBtn");
+    if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerText = "Read more";
+        moreText.style.display = "none";
+    } else {
+        dots.style.display = "none";
+        btnText.innerText = "Read less";
+        moreText.style.display = "inline";
+    }
+}
+// // // // // // // 3. In previous assignment you have created a tabular data using JavaScript. Let’s modify that. Create a form which takes student’s name, class and roll number. On submission of the form, add the data in the table and display the updated table on your webpage. Also add a “Delete” button in each row to delete the respective row.
+function addStudent() {
+    var name = document.getElementById("studentName").value;
+    var studentClass = document.getElementById("studentClass").value;
+    var rollNumber = document.getElementById("rollNumber").value;
+    var table = document.getElementById("studentTable");
+    var newRow = table.insertRow();
+    var cell1 = newRow.insertCell(0);
+    var cell2 = newRow.insertCell(1);
+    var cell3 = newRow.insertCell(2);
+    var cell4 = newRow.insertCell(3);
+    cell1.innerText = name;
+    cell2.innerText = studentClass;
+    cell3.innerText = rollNumber;
+    cell4.innerHTML = '<button onclick="deleteRow(this)">Delete</button>';
+    document.getElementById("studentForm").reset();
+}
