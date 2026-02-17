@@ -1127,161 +1127,240 @@
 
 // // // // // // Chapter 35-38
 // // // // // // 1. Write a function that displays current date & time in your browser.
-function displayCurrentDateTime() {
-    var currentDateTime = new Date();
-    document.writeln("<h1>Current Date and Time:</h1>");
-    document.writeln(currentDateTime.toString() + "<br>");
-}
+// function displayCurrentDateTime() {
+//     var currentDateTime = new Date();
+//     document.writeln("<h1>Current Date and Time:</h1>");
+//     document.writeln(currentDateTime.toString() + "<br>");
+// }
 
-// // // // // // 2. Write a function that takes first & last name and then it greets the user using his full name.
-function greetUser() {
-    var firstName = prompt("Enter your first name:");
-    var lastName = prompt("Enter your last name:");
-    var fullName = firstName + " " + lastName;
-    alert("Hello, " + fullName + "! Welcome to our website.");
-}
+// // // // // // // 2. Write a function that takes first & last name and then it greets the user using his full name.
+// function greetUser() {
+//     var firstName = prompt("Enter your first name:");
+//     var lastName = prompt("Enter your last name:");
+//     var fullName = firstName + " " + lastName;
+//     alert("Hello, " + fullName + "! Welcome to our website.");
+// }
 
-// // // // // // 3. Write a function that adds two numbers (input by user) and returns the sum of two numbers.
-function addTwoNumbers() {
-    var num1 = parseFloat(prompt("Enter the first number:"));
-    var num2 = parseFloat(prompt("Enter the second number:"));
-    var sum = num1 + num2;
-    return sum;
-}
+// // // // // // // 3. Write a function that adds two numbers (input by user) and returns the sum of two numbers.
+// function addTwoNumbers() {
+//     var num1 = parseFloat(prompt("Enter the first number:"));
+//     var num2 = parseFloat(prompt("Enter the second number:"));
+//     var sum = num1 + num2;
+//     return sum;
+// }
 
-// // // // // // 4. Write a function that takes three arguments num1, num2 & operator & compute the desired operation. Return and show the desired result in your browser.
-function calculate(num1, num2, operator) {
-    var result;
-    switch (operator) {        case "+":
-            result = num1 + num2;
-            break;
-        case "-":
-            result = num1 - num2;
-            break;
-        case "*":
-            result = num1 * num2;
-            break;
-        case "/":
-            result = num1 / num2;
-            break;
-        case "%":
-            result = num1 % num2;
-            break;
-        default:
-            alert("Invalid operator. Please use +, -, *, /, or %.");
-            return null;
-    }
-    return result;
-}
+// // // // // // // 4. Write a function that takes three arguments num1, num2 & operator & compute the desired operation. Return and show the desired result in your browser.
+// function calculate(num1, num2, operator) {
+//     var result;
+//     switch (operator) {        case "+":
+//             result = num1 + num2;
+//             break;
+//         case "-":
+//             result = num1 - num2;
+//             break;
+//         case "*":
+//             result = num1 * num2;
+//             break;
+//         case "/":
+//             result = num1 / num2;
+//             break;
+//         case "%":
+//             result = num1 % num2;
+//             break;
+//         default:
+//             alert("Invalid operator. Please use +, -, *, /, or %.");
+//             return null;
+//     }
+//     return result;
+// }
 
-// // // // // // 5. Write a function that squares its argument.
-function square(num) {
-    return num * num;
-}
+// // // // // // // 5. Write a function that squares its argument.
+// function square(num) {
+//     return num * num;
+// }
 
-// // // // // // 6. Write a function that computes factorial of a number.
-function factorial(n) {
-    if (n < 0) {
-        return "Factorial is not defined for negative numbers.";
-    } else if (n === 0 || n === 1) {
-        return 1;
+// // // // // // // 6. Write a function that computes factorial of a number.
+// function factorial(n) {
+//     if (n < 0) {
+//         return "Factorial is not defined for negative numbers.";
+//     } else if (n === 0 || n === 1) {
+//         return 1;
+//     } else {
+//         var fact = 1;
+//         for (var i = 2; i <= n; i++) {
+//             fact *= i;
+//         }
+//         return fact;
+//     }
+// }
+
+// // // // // // // 7. Write a function that take start and end number as inputs & display counting in your browser.
+// function displayCounting(start, end) {
+//     document.writeln("<h1>Counting from " + start + " to " + end + ":</h1>");
+//     for (var i = start; i <= end; i++) {
+//         document.writeln(i + "<br>");
+//     }
+// }
+
+// // // // // // // 8. Write a nested function that computes hypotenuse of a right angle triangle. Hypotenuse2 = Base2 + Perpendicular2
+// function calculateHypotenuse(base, perpendicular) {
+//     function square(num) {
+//         return num * num;
+//     }
+//     var hypotenuseSquared = square(base) + square(perpendicular);
+//     var hypotenuse = Math.sqrt(hypotenuseSquared);
+//     return hypotenuse;
+// }
+
+// // // // // // // 9. Write a function that calculates the area of a rectangle. A = width * height
+// function calculateRectangleArea(width, height) {
+//     return width * height;
+// }
+
+// // // // // // // 10. Write a JavaScript function that checks whether a passed string is palindrome or not?
+// function isPalindrome(str) {
+//     var cleanedStr = str.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
+//     var reversedStr = cleanedStr.split("").reverse().join("");
+//     return cleanedStr === reversedStr;
+// }
+
+// // // // // // // 11. Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case.
+// function toTitleCase(str) {
+//     return str.toLowerCase().split(" ").map(function(word) {
+//         return word.charAt(0).toUpperCase() + word.slice(1);
+//     }).join(" ");
+// }
+
+// // // // // // // 12. Write a JavaScript function that accepts a string as a parameter and find the longest word within the string.
+// function findLongestWord(str) {
+//     var words = str.split(" ");
+//     var longestWord = "";
+//     for (var i = 0; i < words.length; i++) {
+//         if (words[i].length > longestWord.length) {
+//             longestWord = words[i];
+//         }
+//     }
+//     return longestWord;
+// }
+
+// // // // // // // 13. Write a JavaScript function that accepts two arguments, a string and a letter and the function will count the number of occurrences of the specified letter within the string.
+// function countLetterOccurrences(str, letter) {
+//     var count = 0;
+//     for (var i = 0; i < str.length; i++) {
+//         if (str.charAt(i).toLowerCase() === letter.toLowerCase()) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+
+// // // // // // // 14. The Geometrizer
+// // // Create 2 functions that calculate properties of a circle, using the definitions here.
+// // // Create a function called calcCircumference:
+// function calcCircumference(radius) {
+//     return 2 * Math.PI * radius;
+// }
+
+// // // Create a function called calcArea:
+// function calcArea(radius) {
+//     return Math.PI * radius * radius;
+// }
+
+// // // // // // // Chapter 38-42
+// // // // // // // 1. Write a custom function power(a, b), to calculate the value of a raised to b.
+function power(a, b) {
+    return Math.pow(a, b);
+}
+// // // // // // // 2. Any year is entered through the keyboard. Write a function to determine whether the year is a leap year or not.
+function isLeapYear(year) {
+    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+        return true;
     } else {
-        var fact = 1;
-        for (var i = 2; i <= n; i++) {
-            fact *= i;
-        }
-        return fact;
+        return false;
     }
 }
-
-// // // // // // 7. Write a function that take start and end number as inputs & display counting in your browser.
-function displayCounting(start, end) {
-    document.writeln("<h1>Counting from " + start + " to " + end + ":</h1>");
-    for (var i = start; i <= end; i++) {
-        document.writeln(i + "<br>");
-    }
+// // // // // // // 3. If the lengths of the sides of a triangle are denoted by a, b, and c, then area of triangle is given by area = S(S-a)(S-b)(S-c) where S = (a+b+c)/2 Calculate area of triangle using 2 functions
+function calculateArea(a, b, c) {
+    var S = (a + b + c) / 2;
+    var area = Math.sqrt(S * (S - a) * (S - b) * (S - c));
+    return area;
 }
-
-// // // // // // 8. Write a nested function that computes hypotenuse of a right angle triangle. Hypotenuse2 = Base2 + Perpendicular2
-function calculateHypotenuse(base, perpendicular) {
-    function square(num) {
-        return num * num;
-    }
-    var hypotenuseSquared = square(base) + square(perpendicular);
-    var hypotenuse = Math.sqrt(hypotenuseSquared);
-    return hypotenuse;
+// // // // // // // 4. Write a function that receives marks received by a student in 3 subjects and returns the average and percentage of these marks. There should be 3 functions one is the mainFunction and other are for average and percentage.
+function calculateAverage(marks1, marks2, marks3) {
+    return (marks1 + marks2 + marks3) / 3;
 }
-
-// // // // // // 9. Write a function that calculates the area of a rectangle. A = width * height
-function calculateRectangleArea(width, height) {
-    return width * height;
+function calculatePercentage(marks1, marks2, marks3) {
+    var totalMarks = 300;
+    var obtainedMarks = marks1 + marks2 + marks3;
+    return (obtainedMarks / totalMarks) * 100;
 }
-
-// // // // // // 10. Write a JavaScript function that checks whether a passed string is palindrome or not?
-function isPalindrome(str) {
-    var cleanedStr = str.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
-    var reversedStr = cleanedStr.split("").reverse().join("");
-    return cleanedStr === reversedStr;
+function mainFunction(marks1, marks2, marks3) {
+    var average = calculateAverage(marks1, marks2, marks3);
+    var percentage = calculatePercentage(marks1, marks2, marks3);
+    return {
+        average: average,
+        percentage: percentage
+    };
 }
-
-// // // // // // 11. Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case.
-function toTitleCase(str) {
-    return str.toLowerCase().split(" ").map(function(word) {
-        return word.charAt(0).toUpperCase() + word.slice(1);
-    }).join(" ");
-}
-
-// // // // // // 12. Write a JavaScript function that accepts a string as a parameter and find the longest word within the string.
-function findLongestWord(str) {
-    var words = str.split(" ");
-    var longestWord = "";
-    for (var i = 0; i < words.length; i++) {
-        if (words[i].length > longestWord.length) {
-            longestWord = words[i];
-        }
-    }
-    return longestWord;
-}
-
-// // // // // // 13. Write a JavaScript function that accepts two arguments, a string and a letter and the function will count the number of occurrences of the specified letter within the string.
-function countLetterOccurrences(str, letter) {
-    var count = 0;
+// // // // // // // 5. You have learned the function indexOf. Code your own custom function that will perform the same functionality. You can code for single character as of now.
+function customIndexOf(str, char) {
     for (var i = 0; i < str.length; i++) {
-        if (str.charAt(i).toLowerCase() === letter.toLowerCase()) {
+        if (str.charAt(i) === char) {
+            return i;
+        }
+    }
+    return -1; // Return -1 if character is not found
+}
+// // // // // // // 6. Write a function to delete all vowels from a sentence. Assume that the sentence is not more than 25 characters long.
+function deleteVowels(sentence) {
+    return sentence.replace(/[aeiouAEIOU]/g, "");
+}
+// // // // // // // 7. Write a function with switch statement to count the number of occurrences of any two vowels in succession in a line of text. For example, in the sentence “Pleases read this application and give me gratuity” such occurrences are ea, ea, ui.
+function countSuccessiveVowels(text) {
+    var count = 0;
+    var vowels = "aeiouAEIOU";
+    for (var i = 0; i < text.length - 1; i++) {
+        var currentChar = text.charAt(i);
+        var nextChar = text.charAt(i + 1);
+        if (vowels.indexOf(currentChar) !== -1 && vowels.indexOf(nextChar) !== -1) {
             count++;
         }
     }
     return count;
 }
-
-// // // // // // 14. The Geometrizer
-// // Create 2 functions that calculate properties of a circle, using the definitions here.
-// // Create a function called calcCircumference:
-function calcCircumference(radius) {
-    return 2 * Math.PI * radius;
+// // // // // // // 8. The distance between the two cities (in km.) is input through the keyboard. Write four functions to convert and display this distance in meters, feet, inches and centimeters.
+function convertToMeters(km) {
+    return km * 1000;
 }
-
-// // Create a function called calcArea:
-function calcArea(radius) {
-    return Math.PI * radius * radius;
+function convertToFeet(km) {
+    return km * 3280.84;
 }
-
-// // // // // // // Chapter 38-42
-// // // // // // // 1. Write a function that computes the power of a number. E.g. power(2,3) should return 8.
-// function power(base, exponent) {
-//     return Math.pow(base, exponent);
-// }
-
-// // // // // // // 2. Any year is entered through the keyboard. Write a function to determine whether the year is a leap year or not.
-// function isLeapYear(year) {
-//     if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
-//         return true;
-//     } else {        return false;
-//     }}
-// // // // // // // 3. Write a function that takes three arguments and returns the largest of them.
-// function findLargest(num1, num2, num3) {
-//     return Math.max(num1, num2, num3);
-// }
-//
-//
-//
+function convertToInches(km) {
+    return km * 39370.1;
+}
+function convertToCentimeters(km) {
+    return km * 100000;
+}
+// // // // // // // 9. Write a program to calculate overtime pay of employees. Overtime is paid at the rate of Rs. 12.00 per hour for every hour worked above 40 hours. Assume that employees do not work for fractional part of an hour.
+function calculateOvertimePay(hoursWorked) {
+    var overtimeRate = 12.00;
+    if (hoursWorked > 40) {
+        var overtimeHours = hoursWorked - 40;
+        return overtimeHours * overtimeRate;
+    } else {
+        return 0; // No overtime pay if hours worked is 40 or less
+    }
+}
+// // // // // // // 10. A cashier has currency notes of denominations 10, 50 and 100. If the amount to be withdrawn is input through the keyboard in hundreds, find the total number of currency notes of each denomination the cashier will have to give to the withdrawer.
+function calculateCurrencyNotes(amount) {
+    var notes100 = Math.floor(amount / 100);
+    var remainingAmount = amount % 100;
+    var notes50 = Math.floor(remainingAmount / 50);
+    remainingAmount = remainingAmount % 50;
+    var notes10 = Math.floor(remainingAmount / 10);
+    return {
+        notes100: notes100,
+        notes50: notes50,
+        notes10: notes10
+    };
+}
