@@ -1436,10 +1436,10 @@ function addStudent() {
     document.getElementById("studentForm").reset();
 }
 
-// // // // // // // Chapter 53-58
-// // // // // // // 1. Show an image in full size on click on a thumbnail image.
-function showFullSizeImage(thumbnail) {
-    var fullSizeImage = document.getElementById("fullSizeImage");
-    fullSizeImage.src = thumbnail.src;
-    fullSizeImage.style.display = "block";
-}
+// // // // // // // // Chapter 53-58
+// // // // // // // // 1. Show an image in full size on click on a thumbnail image.
+// function showFullSizeImage(thumbnail) {
+//     var fullSizeImage = document.getElementById("fullSizeImage");
+//     fullSizeImage.src = thumbnail.src;
+//     fullSizeImage.style.display = "block";
+// }
