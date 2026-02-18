@@ -1435,3 +1435,5 @@ function addStudent() {
     cell4.innerHTML = '<button onclick="deleteRow(this)">Delete</button>';
     document.getElementById("studentForm").reset();
 }
+
+// // // // // // // Chapter 53-58
