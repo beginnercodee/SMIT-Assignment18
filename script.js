@@ -1266,180 +1266,242 @@
 //     return Math.PI * radius * radius;
 // }
 
-// // // // // // // Chapter 38-42
-// // // // // // // 1. Write a custom function power(a, b), to calculate the value of a raised to b.
-function power(a, b) {
-    return Math.pow(a, b);
-}
-// // // // // // // 2. Any year is entered through the keyboard. Write a function to determine whether the year is a leap year or not.
-function isLeapYear(year) {
-    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
-        return true;
-    } else {
-        return false;
-    }
-}
-// // // // // // // 3. If the lengths of the sides of a triangle are denoted by a, b, and c, then area of triangle is given by area = S(S-a)(S-b)(S-c) where S = (a+b+c)/2 Calculate area of triangle using 2 functions
-function calculateArea(a, b, c) {
-    var S = (a + b + c) / 2;
-    var area = Math.sqrt(S * (S - a) * (S - b) * (S - c));
-    return area;
-}
-// // // // // // // 4. Write a function that receives marks received by a student in 3 subjects and returns the average and percentage of these marks. There should be 3 functions one is the mainFunction and other are for average and percentage.
-function calculateAverage(marks1, marks2, marks3) {
-    return (marks1 + marks2 + marks3) / 3;
-}
-function calculatePercentage(marks1, marks2, marks3) {
-    var totalMarks = 300;
-    var obtainedMarks = marks1 + marks2 + marks3;
-    return (obtainedMarks / totalMarks) * 100;
-}
-function mainFunction(marks1, marks2, marks3) {
-    var average = calculateAverage(marks1, marks2, marks3);
-    var percentage = calculatePercentage(marks1, marks2, marks3);
-    return {
-        average: average,
-        percentage: percentage
-    };
-}
-// // // // // // // 5. You have learned the function indexOf. Code your own custom function that will perform the same functionality. You can code for single character as of now.
-function customIndexOf(str, char) {
-    for (var i = 0; i < str.length; i++) {
-        if (str.charAt(i) === char) {
-            return i;
-        }
-    }
-    return -1; // Return -1 if character is not found
-}
-// // // // // // // 6. Write a function to delete all vowels from a sentence. Assume that the sentence is not more than 25 characters long.
-function deleteVowels(sentence) {
-    return sentence.replace(/[aeiouAEIOU]/g, "");
-}
-// // // // // // // 7. Write a function with switch statement to count the number of occurrences of any two vowels in succession in a line of text. For example, in the sentence “Pleases read this application and give me gratuity” such occurrences are ea, ea, ui.
-function countSuccessiveVowels(text) {
-    var count = 0;
-    var vowels = "aeiouAEIOU";
-    for (var i = 0; i < text.length - 1; i++) {
-        var currentChar = text.charAt(i);
-        var nextChar = text.charAt(i + 1);
-        if (vowels.indexOf(currentChar) !== -1 && vowels.indexOf(nextChar) !== -1) {
-            count++;
-        }
-    }
-    return count;
-}
-// // // // // // // 8. The distance between the two cities (in km.) is input through the keyboard. Write four functions to convert and display this distance in meters, feet, inches and centimeters.
-function convertToMeters(km) {
-    return km * 1000;
-}
-function convertToFeet(km) {
-    return km * 3280.84;
-}
-function convertToInches(km) {
-    return km * 39370.1;
-}
-function convertToCentimeters(km) {
-    return km * 100000;
-}
-// // // // // // // 9. Write a program to calculate overtime pay of employees. Overtime is paid at the rate of Rs. 12.00 per hour for every hour worked above 40 hours. Assume that employees do not work for fractional part of an hour.
-function calculateOvertimePay(hoursWorked) {
-    var overtimeRate = 12.00;
-    if (hoursWorked > 40) {
-        var overtimeHours = hoursWorked - 40;
-        return overtimeHours * overtimeRate;
-    } else {
-        return 0; // No overtime pay if hours worked is 40 or less
-    }
-}
-// // // // // // // 10. A cashier has currency notes of denominations 10, 50 and 100. If the amount to be withdrawn is input through the keyboard in hundreds, find the total number of currency notes of each denomination the cashier will have to give to the withdrawer.
-function calculateCurrencyNotes(amount) {
-    var notes100 = Math.floor(amount / 100);
-    var remainingAmount = amount % 100;
-    var notes50 = Math.floor(remainingAmount / 50);
-    remainingAmount = remainingAmount % 50;
-    var notes10 = Math.floor(remainingAmount / 10);
-    return {
-        notes100: notes100,
-        notes50: notes50,
-        notes10: notes10
-    };
-}
-// // // // // // // Chapter 43-48
-// // // // // // // 1. Show an alert box on click on a link.
-function showAlert() {
-    alert("You clicked the link!");
-}
-// // // // // // // 2. Display some Mobile images in browser. On click on an image Show the message in alert to user.
-function showImageAlert() {
-    alert("You clicked the image!");
-}
-// // // // // // // 3. Display 10 student records in table and each row should contain a delete button. If you click on a button to delete a record, entire row should be deleted.
-function deleteRow(button) {
-    var row = button.parentNode.parentNode;
-    row.parentNode.removeChild(row);
-}
-// // // // // // // 4. Display an image in browser. Change the picture on mouseover and set the first picture on mouseout.
-function changeImageOnMouseOver(image) {
-    image.src = "https://img.freepik.com/free-photo/lavender-field-sunset-near-valensole_268835-3910.jpg?semt=ais_user_personalization&w=740&q=80";
-}
-function resetImageOnMouseOut(image) {
-    image.src = "https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-600nw-2479236003.jpg";
-}
-// // // // // // // 5. Show a counter in browser. Counter should increase on click on increase button and decrease on click on decrease button. And show updated counter value in browser.
-var counterValue = 0;
-function increaseCounter() {
-    counterValue++;
-    document.getElementById("counter").innerText = counterValue;
-}
-function decreaseCounter() {
-    counterValue--;
-    document.getElementById("counter").innerText = counterValue;
-}
-// // // // // // // Chapter 49-52
-// // // // // // // 1. Create a signup form and display form data in your web page on submission.
-function displayFormData() {
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
-    document.getElementById("formData").innerHTML = "<h2>Form Data:</h2><p>Name: " + name + "</p><p>Email: " + email + "</p><p>Password: " + password + "</p>";
-}
-// // // // // // // 2. Suppose in your webpage there is content area in which you have entered your item details, but user can only see some details on first look. When user clicks on “Read more” button, full detail of that particular item will be displayed.
-function readMore() {
-    var dots = document.getElementById("dots");
-    var moreText = document.getElementById("more");
-    var btnText = document.getElementById("readMoreBtn");
-    if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerText = "Read more";
-        moreText.style.display = "none";
-    } else {
-        dots.style.display = "none";
-        btnText.innerText = "Read less";
-        moreText.style.display = "inline";
-    }
-}
-// // // // // // // 3. In previous assignment you have created a tabular data using JavaScript. Let’s modify that. Create a form which takes student’s name, class and roll number. On submission of the form, add the data in the table and display the updated table on your webpage. Also add a “Delete” button in each row to delete the respective row.
-function addStudent() {
-    var name = document.getElementById("studentName").value;
-    var studentClass = document.getElementById("studentClass").value;
-    var rollNumber = document.getElementById("rollNumber").value;
-    var table = document.getElementById("studentTable");
-    var newRow = table.insertRow();
-    var cell1 = newRow.insertCell(0);
-    var cell2 = newRow.insertCell(1);
-    var cell3 = newRow.insertCell(2);
-    var cell4 = newRow.insertCell(3);
-    cell1.innerText = name;
-    cell2.innerText = studentClass;
-    cell3.innerText = rollNumber;
-    cell4.innerHTML = '<button onclick="deleteRow(this)">Delete</button>';
-    document.getElementById("studentForm").reset();
-}
+// // // // // // // // Chapter 38-42
+// // // // // // // // 1. Write a custom function power(a, b), to calculate the value of a raised to b.
+// function power(a, b) {
+//     return Math.pow(a, b);
+// }
+// // // // // // // // 2. Any year is entered through the keyboard. Write a function to determine whether the year is a leap year or not.
+// function isLeapYear(year) {
+//     if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+// // // // // // // // 3. If the lengths of the sides of a triangle are denoted by a, b, and c, then area of triangle is given by area = S(S-a)(S-b)(S-c) where S = (a+b+c)/2 Calculate area of triangle using 2 functions
+// function calculateArea(a, b, c) {
+//     var S = (a + b + c) / 2;
+//     var area = Math.sqrt(S * (S - a) * (S - b) * (S - c));
+//     return area;
+// }
+// // // // // // // // 4. Write a function that receives marks received by a student in 3 subjects and returns the average and percentage of these marks. There should be 3 functions one is the mainFunction and other are for average and percentage.
+// function calculateAverage(marks1, marks2, marks3) {
+//     return (marks1 + marks2 + marks3) / 3;
+// }
+// function calculatePercentage(marks1, marks2, marks3) {
+//     var totalMarks = 300;
+//     var obtainedMarks = marks1 + marks2 + marks3;
+//     return (obtainedMarks / totalMarks) * 100;
+// }
+// function mainFunction(marks1, marks2, marks3) {
+//     var average = calculateAverage(marks1, marks2, marks3);
+//     var percentage = calculatePercentage(marks1, marks2, marks3);
+//     return {
+//         average: average,
+//         percentage: percentage
+//     };
+// }
+// // // // // // // // 5. You have learned the function indexOf. Code your own custom function that will perform the same functionality. You can code for single character as of now.
+// function customIndexOf(str, char) {
+//     for (var i = 0; i < str.length; i++) {
+//         if (str.charAt(i) === char) {
+//             return i;
+//         }
+//     }
+//     return -1; // Return -1 if character is not found
+// }
+// // // // // // // // 6. Write a function to delete all vowels from a sentence. Assume that the sentence is not more than 25 characters long.
+// function deleteVowels(sentence) {
+//     return sentence.replace(/[aeiouAEIOU]/g, "");
+// }
+// // // // // // // // 7. Write a function with switch statement to count the number of occurrences of any two vowels in succession in a line of text. For example, in the sentence “Pleases read this application and give me gratuity” such occurrences are ea, ea, ui.
+// function countSuccessiveVowels(text) {
+//     var count = 0;
+//     var vowels = "aeiouAEIOU";
+//     for (var i = 0; i < text.length - 1; i++) {
+//         var currentChar = text.charAt(i);
+//         var nextChar = text.charAt(i + 1);
+//         if (vowels.indexOf(currentChar) !== -1 && vowels.indexOf(nextChar) !== -1) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+// // // // // // // // 8. The distance between the two cities (in km.) is input through the keyboard. Write four functions to convert and display this distance in meters, feet, inches and centimeters.
+// function convertToMeters(km) {
+//     return km * 1000;
+// }
+// function convertToFeet(km) {
+//     return km * 3280.84;
+// }
+// function convertToInches(km) {
+//     return km * 39370.1;
+// }
+// function convertToCentimeters(km) {
+//     return km * 100000;
+// }
+// // // // // // // // 9. Write a program to calculate overtime pay of employees. Overtime is paid at the rate of Rs. 12.00 per hour for every hour worked above 40 hours. Assume that employees do not work for fractional part of an hour.
+// function calculateOvertimePay(hoursWorked) {
+//     var overtimeRate = 12.00;
+//     if (hoursWorked > 40) {
+//         var overtimeHours = hoursWorked - 40;
+//         return overtimeHours * overtimeRate;
+//     } else {
+//         return 0; // No overtime pay if hours worked is 40 or less
+//     }
+// }
+// // // // // // // // 10. A cashier has currency notes of denominations 10, 50 and 100. If the amount to be withdrawn is input through the keyboard in hundreds, find the total number of currency notes of each denomination the cashier will have to give to the withdrawer.
+// function calculateCurrencyNotes(amount) {
+//     var notes100 = Math.floor(amount / 100);
+//     var remainingAmount = amount % 100;
+//     var notes50 = Math.floor(remainingAmount / 50);
+//     remainingAmount = remainingAmount % 50;
+//     var notes10 = Math.floor(remainingAmount / 10);
+//     return {
+//         notes100: notes100,
+//         notes50: notes50,
+//         notes10: notes10
+//     };
+// }
+// // // // // // // // Chapter 43-48
+// // // // // // // // 1. Show an alert box on click on a link.
+// function showAlert() {
+//     alert("You clicked the link!");
+// }
+// // // // // // // // 2. Display some Mobile images in browser. On click on an image Show the message in alert to user.
+// function showImageAlert() {
+//     alert("You clicked the image!");
+// }
+// // // // // // // // 3. Display 10 student records in table and each row should contain a delete button. If you click on a button to delete a record, entire row should be deleted.
+// function deleteRow(button) {
+//     var row = button.parentNode.parentNode;
+//     row.parentNode.removeChild(row);
+// }
+// // // // // // // // 4. Display an image in browser. Change the picture on mouseover and set the first picture on mouseout.
+// function changeImageOnMouseOver(image) {
+//     image.src = "https://img.freepik.com/free-photo/lavender-field-sunset-near-valensole_268835-3910.jpg?semt=ais_user_personalization&w=740&q=80";
+// }
+// function resetImageOnMouseOut(image) {
+//     image.src = "https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-600nw-2479236003.jpg";
+// }
+// // // // // // // // 5. Show a counter in browser. Counter should increase on click on increase button and decrease on click on decrease button. And show updated counter value in browser.
+// var counterValue = 0;
+// function increaseCounter() {
+//     counterValue++;
+//     document.getElementById("counter").innerText = counterValue;
+// }
+// function decreaseCounter() {
+//     counterValue--;
+//     document.getElementById("counter").innerText = counterValue;
+// }
+// // // // // // // // Chapter 49-52
+// // // // // // // // 1. Create a signup form and display form data in your web page on submission.
+// function displayFormData() {
+//     var name = document.getElementById("name").value;
+//     var email = document.getElementById("email").value;
+//     var password = document.getElementById("password").value;
+//     document.getElementById("formData").innerHTML = "<h2>Form Data:</h2><p>Name: " + name + "</p><p>Email: " + email + "</p><p>Password: " + password + "</p>";
+// }
+// // // // // // // // 2. Suppose in your webpage there is content area in which you have entered your item details, but user can only see some details on first look. When user clicks on “Read more” button, full detail of that particular item will be displayed.
+// function readMore() {
+//     var dots = document.getElementById("dots");
+//     var moreText = document.getElementById("more");
+//     var btnText = document.getElementById("readMoreBtn");
+//     if (dots.style.display === "none") {
+//         dots.style.display = "inline";
+//         btnText.innerText = "Read more";
+//         moreText.style.display = "none";
+//     } else {
+//         dots.style.display = "none";
+//         btnText.innerText = "Read less";
+//         moreText.style.display = "inline";
+//     }
+// }
+// // // // // // // // 3. In previous assignment you have created a tabular data using JavaScript. Let’s modify that. Create a form which takes student’s name, class and roll number. On submission of the form, add the data in the table and display the updated table on your webpage. Also add a “Delete” button in each row to delete the respective row.
+// function addStudent() {
+//     var name = document.getElementById("studentName").value;
+//     var studentClass = document.getElementById("studentClass").value;
+//     var rollNumber = document.getElementById("rollNumber").value;
+//     var table = document.getElementById("studentTable");
+//     var newRow = table.insertRow();
+//     var cell1 = newRow.insertCell(0);
+//     var cell2 = newRow.insertCell(1);
+//     var cell3 = newRow.insertCell(2);
+//     var cell4 = newRow.insertCell(3);
+//     cell1.innerText = name;
+//     cell2.innerText = studentClass;
+//     cell3.innerText = rollNumber;
+//     cell4.innerHTML = '<button onclick="deleteRow(this)">Delete</button>';
+//     document.getElementById("studentForm").reset();
+// }
 
-// // // // // // // Chapter 53-58
-// // // // // // // 1. Show an image in full size on click on a thumbnail image.
-function showFullSizeImage(thumbnail) {
-    var fullSizeImage = document.getElementById("fullSizeImage");
-    fullSizeImage.src = thumbnail.src;
-    fullSizeImage.style.display = "block";
+// // // // // // // // Chapter 58-67
+// // // // // // // 1. Consider you have following code snippet:
+// // // // // // // (Copy it in your HTML file)
+// // // // // // // <div>
+// // // // // // //     <h1>DOM</h1>
+// // // // // // //     <div id="form-content">
+// // // // // // //         <label for="first-name">First Name</label>
+// // // // // // //         <input type="text" id="first-name">
+// // // // // // //         <label for="last-name">Last Name</label>
+// // // // // // //         <input type="text" id="last-name">
+// // // // // // //         <label for="email">Email</label>
+// // // // // // //         <input type="text" id="email">
+// // // // // // //     </div>
+// // // // // // //     <div id="main-content">
+// // // // // // //         <p class="render">First Name : Alex</p>
+// // // // // // //         <p class="render" id="lastName">Last Name : Bank</p>
+// // // // // // //         <p class="render">Email : alexbank@gmail.com</p>
+// // // // // // //         <p class="render">Country : Pakistan</p>
+// // // // // // //         <p class="render">Contact : +92 300 1234567</p>
+// // // // // // //     </div>
+// // // // // // // </div>
+// // // // // // // i. Get element of id “main-content” and assign them in a variable.
+var mainContent = document.getElementById("main-content");
+// // // // // // // ii. Display all child elements of “main-content” element in your browser.
+var childElements = mainContent.children;
+for (var i = 0; i < childElements.length; i++) {
+    document.writeln(childElements[i].outerHTML + "<br>");
 }
+// // // // // // // iii. Get all elements of class “render” and show their innerHTML in your browser.
+var renderElements = document.getElementsByClassName("render");
+for (var i = 0; i < renderElements.length; i++) {
+    document.writeln(renderElements[i].innerHTML + "<br>");
+}
+// // // // // // // iv. Fill input value whose element id first-name using JavaScript.
+document.getElementById("first-name").value = "John";
+// // // // // // // v. Repeat part d for id ”last-name” and “email”.
+document.getElementById("last-name").value = "Doe";
+document.getElementById("email").value = "johndoe@example.com";
+// // // // // // // 2. Use HTML code of question 1 and show the result of following in your browser.
+// // // // // // // i. What is node type of element having id “form-content”?
+var formContent = document.getElementById("form-content");
+var nodeTypeFormContent = formContent.nodeType;
+document.writeln("Node type of element with id 'form-content': " + nodeTypeFormContent + "<br>");
+// // // // // // // ii. Show node type of element having id “lastName” and its child node.
+var lastNameElement = document.getElementById("lastName");
+var nodeTypeLastName = lastNameElement.nodeType;
+var childNodeLastName = lastNameElement.firstChild;
+var nodeTypeChildNodeLastName = childNodeLastName.nodeType;
+document.writeln("Node type of element with id 'lastName': " + nodeTypeLastName + "<br>");
+document.writeln("Node type of child node of element with id 'lastName': " + nodeTypeChildNodeLastName + "<br>");
+// // // // // // // iii. Update child node of element having id “lastName”.
+lastNameElement.firstChild.nodeValue = "Last Name : Smith";
+document.writeln("Updated child node of element with id 'lastName': " + lastNameElement.innerHTML + "<br>");
+// // // // // // // iv. Get first and last child of id “main-content”.
+var firstChildMainContent = mainContent.firstElementChild;
+var lastChildMainContent = mainContent.lastElementChild;
+document.writeln("First child of element with id 'main-content': " + firstChildMainContent.outerHTML + "<br>");
+document.writeln("Last child of element with id 'main-content': " + lastChildMainContent.outerHTML + "<br>");
+// // // // // // // v. Get next and previous siblings of id “lastName”.
+var nextSiblingLastName = lastNameElement.nextElementSibling;
+var previousSiblingLastName = lastNameElement.previousElementSibling;
+document.writeln("Next sibling of element with id 'lastName': " + (nextSiblingLastName ? nextSiblingLastName.outerHTML : "None") + "<br>");
+document.writeln("Previous sibling of element with id 'lastName': " + (previousSiblingLastName ? previousSiblingLastName.outerHTML : "None") + "<br>");
+// // // // // // // vi. Get parent node and node type of element having id “email”
+var emailElement = document.getElementById("email");
+var parentNodeEmail = emailElement.parentNode;
+var nodeTypeEmail = emailElement.nodeType;
+document.writeln("Parent node of element with id 'email': " + parentNodeEmail.outerHTML + "<br>");
+document.writeln("Node type of element with id 'email': " + nodeTypeEmail + "<br>");
