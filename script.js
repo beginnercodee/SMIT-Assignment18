@@ -1505,3 +1505,195 @@ var parentNodeEmail = emailElement.parentNode;
 var nodeTypeEmail = emailElement.nodeType;
 document.writeln("Parent node of element with id 'email': " + parentNodeEmail.outerHTML + "<br>");
 document.writeln("Node type of element with id 'email': " + nodeTypeEmail + "<br>");
+
+// // // // // // // // objects
+// // // // // // // // 1. Suppose you have an array of object
+// // // // // // // // var itemsArray = [
+// // // // // // // //     { name: "juice", price: 50, quantity: 3 },
+// // // // // // // //     { name: "cookie", price: 30, quantity: 9 },
+// // // // // // // //     { name: "shirt", price: 880, quantity: 1 },
+// // // // // // // //     { name: "pen", price: 100, quantity: 2 }];
+// // // // // // // // Calculate the total price of each item and all items;
+var itemsArray = [
+    { name: "juice", price: 50, quantity: 3 },
+    { name: "cookie", price: 30, quantity: 9 },
+    { name: "shirt", price: 880, quantity: 1 },
+    { name: "pen", price: 100, quantity: 2 }
+];
+var totalPriceAllItems = 0;
+for (var i = 0; i < itemsArray.length; i++) {
+    var itemTotalPrice = itemsArray[i].price * itemsArray[i].quantity;
+    totalPriceAllItems += itemTotalPrice;
+    document.writeln("Total price of " + itemsArray[i].name + ": " + itemTotalPrice + "<br>");
+}
+document.writeln("Total price of all items: " + totalPriceAllItems + "<br>");
+// // // // // // // // 2. Create an object with properties: name, email, password, age, gender, city, country.
+// // // // // // // // Check if age and country properties exist in object or not. Also check firstName and lastName properties in object.
+var person = {
+    name: "John Doe",
+    email: "john.doe@example.com",
+    password: "password123",
+    age: 30,
+    gender: "Male",
+    city: "New York",
+    country: "USA"
+};
+var hasAge = person.hasOwnProperty("age");
+var hasCountry = person.hasOwnProperty("country");
+var hasFirstName = person.hasOwnProperty("firstName");
+var hasLastName = person.hasOwnProperty("lastName");
+document.writeln("Does the object have 'age' property? " + hasAge + "<br>");
+document.writeln("Does the object have 'country' property? " + hasCountry + "<br>");
+document.writeln("Does the object have 'firstName' property? " + hasFirstName + "<br>");
+document.writeln("Does the object have 'lastName' property? " + hasLastName + "<br>");
+// // // // // // // // 3. Create a constructor function with some properties. Now create multiple records using the constructor.
+function Person(name, email, age) {
+    this.name = name;
+    this.email = email;
+    this.age = age;
+}
+var person1 = new Person("Alice", "alice@example.com", 25);
+var person2 = new Person("Bob", "bob@example.com", 30);
+document.writeln("Person 1: " + person1.name + ", " + person1.email + ", " + person1.age + "<br>");
+document.writeln("Person 2: " + person2.name + ", " + person2.email + ", " + person2.age + "<br>");
+// // // // // // // // // 4. Suppose you want to check population of your area, their educations and professions.
+// // // // // // // // // Create a constructor function which holds following properties:
+// // // // // // // // // Name, gender, address, education, profession,
+// // // // // // // // // Enter all records one by one.
+// // // // // // // // // Hint:
+// // // // // // // // // use select box for education and profession,
+// // // // // // // // // use radio box for gender
+// // // // // // // // // Bonus: you can use localStorage to save records.
+// 1. The Constructor Function
+function Resident(name, gender, address, education, profession) {
+    this.name = name;
+    this.gender = gender;
+    this.address = address;
+    this.education = education;
+    this.profession = profession;
+}
+
+// Global array to hold records in memory
+var populationList = [];
+
+// 2. Build the Interface completely via JavaScript
+document.body.style.fontFamily = "sans-serif";
+document.body.style.padding = "20px";
+
+// Generate the HTML String
+var interfaceHTML = `
+    <h2>Population Census (JS Only)</h2>
+    <div style="background: #f4f4f4; padding: 20px; border-radius: 8px; max-width: 500px;">
+        <label><b>Name:</b></label><br>
+        <input type="text" id="p_name" style="width: 100%; margin-bottom: 10px;"><br>
+
+        <label><b>Gender:</b></label><br>
+        <input type="radio" name="p_gender" value="Male" checked> Male
+        <input type="radio" name="p_gender" value="Female"> Female <br><br>
+
+        <label><b>Address:</b></label><br>
+        <input type="text" id="p_address" style="width: 100%; margin-bottom: 10px;"><br>
+
+        <label><b>Education:</b></label><br>
+        <select id="p_education" style="width: 100%; margin-bottom: 10px; padding: 5px;">
+            <option value="Matric">Matric</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Bachelor's">Bachelor's</option>
+            <option value="Master's">Master's</option>
+            <option value="PhD">PhD</option>
+        </select><br>
+
+        <label><b>Profession:</b></label><br>
+        <select id="p_profession" style="width: 100%; margin-bottom: 20px; padding: 5px;">
+            <option value="Student">Student</option>
+            <option value="Engineer">Engineer</option>
+            <option value="Doctor">Doctor</option>
+            <option value="Teacher">Teacher</option>
+            <option value="Business">Business</option>
+        </select><br>
+
+        <button onclick="addRecord()" style="background: green; color: white; padding: 10px 20px; border: none; cursor: pointer;">
+            Add Resident
+        </button>
+    </div>
+
+    <hr style="margin: 30px 0;">
+
+    <h3>Current Records</h3>
+    <table border="1" cellpadding="10" style="border-collapse: collapse; width: 100%;">
+        <thead>
+            <tr style="background: #ddd;">
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Education</th>
+                <th>Profession</th>
+            </tr>
+        </thead>
+        <tbody id="table_body">
+            </tbody>
+    </table>
+`;
+
+// Inject HTML into the page
+document.body.innerHTML = interfaceHTML;
+
+
+// 3. Logic to Add Records
+function addRecord() {
+    // A. Get values from inputs
+    var name = document.getElementById('p_name').value;
+    var address = document.getElementById('p_address').value;
+    var education = document.getElementById('p_education').value;
+    var profession = document.getElementById('p_profession').value;
+    
+    // Get Radio Button Value
+    var genderRadios = document.getElementsByName('p_gender');
+    var genderValue = "Male"; // Default
+    for(var i = 0; i < genderRadios.length; i++) {
+        if(genderRadios[i].checked) {
+            genderValue = genderRadios[i].value;
+            break;
+        }
+    }
+
+    // Validation (Simple check)
+    if(name === "" || address === "") {
+        alert("Please fill out Name and Address!");
+        return;
+    }
+
+    // B. Create Object using Constructor
+    var newResident = new Resident(name, genderValue, address, education, profession);
+
+    // C. Save to Array (Memory)
+    populationList.push(newResident);
+
+    // D. Refresh the Table
+    renderTable();
+
+    // E. Clear Text Inputs (Optional)
+    document.getElementById('p_name').value = "";
+    document.getElementById('p_address').value = "";
+}
+
+// 4. Function to Render Table from Array
+function renderTable() {
+    var tbody = document.getElementById('table_body');
+    tbody.innerHTML = ""; // Clear existing rows
+
+    // Loop through the array and build rows
+    for (var i = 0; i < populationList.length; i++) {
+        var rec = populationList[i];
+        
+        var rowHTML = "<tr>" +
+            "<td>" + rec.name + "</td>" +
+            "<td>" + rec.gender + "</td>" +
+            "<td>" + rec.address + "</td>" +
+            "<td>" + rec.education + "</td>" +
+            "<td>" + rec.profession + "</td>" +
+            "</tr>";
+            
+        tbody.innerHTML += rowHTML;
+    }
+}
