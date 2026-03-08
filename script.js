@@ -1697,4 +1697,3 @@ function renderTable() {
         tbody.innerHTML += rowHTML;
     }
 }
-
